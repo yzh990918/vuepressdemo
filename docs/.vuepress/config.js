@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'Magic take-out restaurant',
-    description: 'Hello, restaurant!',
+    title: '努力中的杨先生的技术文档',
+    description: 'Magic power!',
     head: [
         ['link', {
             rel: 'icon',
@@ -49,11 +49,9 @@ module.exports = {
         lastUpdated: '上次更新',
 
         sidebarDepth: 2,
-        sidebar: [{
-            title: 'Guide',
-            collapsable: false,
-            children: ['/guide/']
-        }],
+        sidebar: {
+            '/guide/': getGuideSidebar('vue2.5仿美团外卖项目', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
+        },
         repo: '251205668',
         repoLabel: 'Github',
         docsRepo: '251205668',
@@ -68,6 +66,34 @@ module.exports = {
             serviceWorker: true,
             updatePopup: true
         }]
+
+    ]
+}
+
+function getGuideSidebar(groupA, groupB, groupC) {
+    return [{
+            title: groupA,
+            collapsable: false,
+            children: [
+                '',
+                'groupAfirst'
+
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'groupBfirst'
+            ]
+        },
+        {
+            title: groupC,
+            collapsable: false,
+            children: [
+                'groupCfirst'
+            ]
+        }
 
     ]
 }
