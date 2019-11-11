@@ -84,14 +84,18 @@ function getGuideSidebar(groupA, groupB, groupC) {
             title: groupB,
             collapsable: false,
             children: [
-                'groupBfirst'
+                'first'
             ]
         },
         {
             title: groupC,
             collapsable: false,
             children: [
-                'groupCfirst'
+                'begin',
+                'C1',
+                'C2',
+                'header',
+                'tab'
             ]
         }
 
