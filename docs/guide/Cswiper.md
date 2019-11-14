@@ -59,7 +59,10 @@ data () {
 
 ## 自定义轮播组件(slider)
 **文件目录**
+<br/>
 ![](./images/2019-11-14-23-10-07.png)
+
+
 >书写自定义组件前安装好better-scroll插件 项目依赖
 ### 第一步.写好基本dom结构和样式
 ```html
@@ -79,26 +82,6 @@ data () {
     </div>
   </div>
 </template>
-.slider
-  min-height: 1px
-  .slider-group
-    position: relative
-    overflow: hidden
-    white-space: nowrap
-    .slide-item
-      // * 轮播图slidergroup的样式
-      float: left
-      box-sizing: border-box
-      overflow: hidden
-      text-align: center
-      a
-        display: block
-        width: 100%
-        overflow: hidden
-        text-decoration: none
-      img
-        display: block
-        width: 100%
 ```
 ```css
 <style lang='stylus' scoped>
@@ -322,7 +305,7 @@ _play () {
     })
   },
 ```
-:::dangerous
+:::danger
 请求recommends是一个异步请求,它加载出资源有延时,所以再slot渲染到父组件前可能recommeds是一个空数组,会导致样式添加失效
 :::
 **解决方法**:在slider组件的父dom上绑定v-if控制

@@ -1,5 +1,5 @@
 ---
-title: 使用jsonp
+title: jsonp
 lang: Zh
 ---
 # 使用jsonp
