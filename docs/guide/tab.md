@@ -7,7 +7,7 @@ lang: ZH
 实现路由(推荐-歌手-排行-搜索)的切换 并且添加基本样式
 <br>
 代码很简单 所以直接贴
-```js
+```html
 <!-- router-link 组成的tab栏 -->
 <template>
   <div class="tab">

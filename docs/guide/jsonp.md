@@ -1,5 +1,5 @@
 ---
-title: catch json data
+title: 使用jsonp
 lang: Zh
 ---
 # 使用jsonp
