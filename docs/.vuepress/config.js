@@ -98,7 +98,9 @@ function getGuideSidebar(groupA, groupB, groupC) {
                 'tab',
                 'jsonp',
                 'getrecommends',
-                'Cswiper'
+                'Cswiper',
+                'recommend',
+                'loading'
             ]
         }
 
