@@ -8,7 +8,7 @@ lang: ZH
 <br>
 
 **拼接url**
-![](./images/code.png)
+![](./images/jsonp.png)
 ## 设置公共配置
 定义好公共的参数 和options和一个常量
 ![](./images/code1.png)

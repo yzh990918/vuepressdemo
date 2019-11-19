@@ -100,7 +100,8 @@ function getGuideSidebar(groupA, groupB, groupC) {
                 'getrecommends',
                 'Cswiper',
                 'recommend',
-                'loading'
+                'loading',
+                'singer'
             ]
         }
 
