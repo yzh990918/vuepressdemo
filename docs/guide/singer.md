@@ -60,3 +60,28 @@ constructor({id,name}){
 **这样数据就会变成如下形式**
 以字母顺序排列的map对象
 ![](./images/2019-11-19-18-08-15.png)
+
+## 对数据进行排序
+:::warning 
+我们只是用map对象盛满了hot对象和map[key]对象,然而vue遍历对象会是一个无序的结果,所以我们还是要将
+对象经过过排序装入数组,得到一个满意的对象数组
+:::
+```js
+let hot=[]
+let singers=[]
+for(let key in map){
+  let value=map[key]
+  if(value.title.match(/[a-zA-Z]/)){
+    // 如果匹配的是字母
+    singers.push(value)
+  }else if(value.title === '热门'){
+    hot.push(value)
+  }
+}
+....
+return hot.concat(singers)
+
+```
+
+**Get到预期的效果**:
+![](./images/2019-11-19-19-57-52.png)

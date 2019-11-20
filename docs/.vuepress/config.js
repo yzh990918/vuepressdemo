@@ -50,7 +50,7 @@ module.exports = {
 
         sidebarDepth: 2,
         sidebar: {
-            '/guide/': getGuideSidebar('vue2.5仿美团外卖项目', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
+            '/guide/': getGuideSidebar('js基础', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
         },
         repo: '251205668',
         repoLabel: 'Github',
@@ -76,7 +76,13 @@ function getGuideSidebar(groupA, groupB, groupC) {
             collapsable: false,
             children: [
                 '',
-                'groupAfirst'
+                'ES6demo1',
+                'ES6demo2',
+                'ES6demo3',
+                'ES6demo4',
+                'ES6demo5',
+                'ES6demo6'
+
 
             ]
         },
