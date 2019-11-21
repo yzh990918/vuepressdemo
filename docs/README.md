@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: /favicon.ico
-actionText: 快速上手 →
+heroImage:  /header.png
+actionText: Get started →
 actionLink: /guide/
 features:
   - title: 简洁至上

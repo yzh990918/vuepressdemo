@@ -1,5 +1,5 @@
 module.exports = {
-    title: '努力中的杨先生的技术文档',
+    title: ' Technical Document',
     description: 'Magic power!',
     head: [
         ['link', {
@@ -21,13 +21,13 @@ module.exports = {
                 link: '/guide/'
             },
             {
-                text: '生态',
+                text: '电子书',
                 items: [{
-                        text: '关于',
+                        text: '前端',
                         link: '/about'
                     },
                     {
-                        text: '友情链接',
+                        text: '服务端',
                         link: '/contact'
                     }
                 ]
@@ -50,11 +50,11 @@ module.exports = {
 
         sidebarDepth: 2,
         sidebar: {
-            '/guide/': getGuideSidebar('js基础', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
+            '/guide/': getGuideSidebar('基础', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
         },
-        repo: '251205668',
+        repo: '251205668/vuepressdemo',
         repoLabel: 'Github',
-        docsRepo: '251205668',
+        docsRepo: '251205668/vuepressdemo',
         docsDir: 'docs',
         docsBranch: 'master',
         editLinks: true,
