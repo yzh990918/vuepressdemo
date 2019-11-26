@@ -29,6 +29,26 @@ module.exports = {
                     {
                         text: '服务端',
                         link: '/contact'
+                    },
+                    {
+                        text: '实用技巧',
+                        link: '/skill'
+                    }
+                ]
+            },
+            {
+                text: '项目',
+                items: [{
+                        text: '去哪儿旅行',
+                        link: 'https://github.com/251205668/Travel'
+                    },
+                    {
+                        text: '饿了么外卖前台',
+                        link: 'https://github.com/251205668/restaurant'
+                    },
+                    {
+                        text: '魔法音乐App',
+                        link: 'https://github.com/251205668/mymusic'
                     }
                 ]
             },
@@ -61,7 +81,7 @@ module.exports = {
         editLinkText: '编辑此页'
     },
     plugins: [
-        ['@vuepress/back-to-top', true],
+        ['@vuepress/back-to-top'],
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: true
@@ -107,7 +127,8 @@ function getGuideSidebar(groupA, groupB, groupC) {
                 'Cswiper',
                 'recommend',
                 'loading',
-                'singer'
+                'singer',
+                'listview'
             ]
         }
 
