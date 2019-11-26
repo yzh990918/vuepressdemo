@@ -72,7 +72,7 @@ module.exports = {
         sidebar: {
             '/guide/': getGuideSidebar('基础', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
         },
-        repo: '251205668/vuepressdemo',
+        repo: '251205668',
         repoLabel: 'Github',
         docsRepo: '251205668/vuepressdemo',
         docsDir: 'docs',
