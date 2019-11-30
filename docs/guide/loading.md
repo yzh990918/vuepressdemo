@@ -4,7 +4,7 @@ lang: ZH
 ---
 ## 加载条
 很简单,直接贴代码
-```html
+```vue
 <template>
   <div class="loading">
     <img width="24"

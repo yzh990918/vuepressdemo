@@ -7,7 +7,7 @@ lang: ZH
 ![](./images/2019-11-11-21-12-54.png)
 ## 代码结构
 结构代码
-```js
+```vue
 <template>
   <div class="m-header">
     <div class="icon"></div>
@@ -21,7 +21,7 @@ lang: ZH
 </template>
 ```
 样式代码
-```css
+```stylus
 .m-header
   position: relative
   height: 44px

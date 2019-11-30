@@ -26,7 +26,7 @@ lang: ZH
 
 ```
 - css样式:listview相对定位,定义容器为当前屏幕,对应的list-group-item是一个flex布局 ,元素垂直居中对齐
-```css
+```stylus
 .listview
   position: relative
   width: 100%
@@ -89,7 +89,7 @@ substring(a,b):截取a-b下标的元素
     </div>
 ```
 - 对应样式:1.垂直居中 2.绝对定位靠右  3.对应容器样式
-```css
+```stylus
   .list-shortcut
     position: absolute
     z-index: 30

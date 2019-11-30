@@ -83,7 +83,7 @@ data () {
   </div>
 </template>
 ```
-```css
+```stylus
 <style lang='stylus' scoped>
 @import '~@/common/stylus/variable.styl'
 .slider

@@ -85,7 +85,7 @@ export function getRecommendlist () {
 }
 ```
 **css样式**:运用flex布局
-```css
+```stylus
  .recommend-list
       .list-title
         height: 65px
