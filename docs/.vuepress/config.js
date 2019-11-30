@@ -81,7 +81,7 @@ module.exports = {
         editLinkText: '编辑此页'
     },
     plugins: [
-        ['@vuepress/back-to-top'],
+        ['@vuepress/back-to-top', true],
         ['@vuepress/pwa', {
             serviceWorker: true,
             updatePopup: true
@@ -128,7 +128,9 @@ function getGuideSidebar(groupA, groupB, groupC) {
                 'recommend',
                 'loading',
                 'singer',
-                'listview'
+                'listview',
+                '映射表'
+
             ]
         }
 
