@@ -129,7 +129,8 @@ function getGuideSidebar(groupA, groupB, groupC) {
                 'loading',
                 'singer',
                 'listview',
-                '映射表'
+                '映射表',
+                'axios'
 
             ]
         }
