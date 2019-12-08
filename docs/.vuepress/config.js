@@ -17,6 +17,10 @@ module.exports = {
                 link: '/'
             },
             {
+                text: '重要的计划(Todo)',
+                link: '/todo/todo'
+            },
+            {
                 text: '指南',
                 link: '/guide/'
             },
@@ -70,7 +74,9 @@ module.exports = {
 
         sidebarDepth: 2,
         sidebar: {
-            '/guide/': getGuideSidebar('基础', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目')
+            '/guide/': getGuideSidebar('基础', 'vue2.5仿去哪儿旅行项目', 'vue2.5制作仿qq音乐项目'),
+            '/todo/': gettodoSidebar('计划')
+
         },
         repo: '251205668',
         repoLabel: 'Github',
@@ -132,6 +138,18 @@ function getGuideSidebar(groupA, groupB, groupC) {
                 '映射表',
                 'axios'
 
+            ]
+        }
+
+    ]
+}
+
+function gettodoSidebar(group) {
+    return [{
+            title: group,
+            collapsable: false,
+            children: [
+                'todo'
             ]
         }
 
