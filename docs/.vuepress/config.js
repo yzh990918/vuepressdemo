@@ -9,6 +9,7 @@ module.exports = {
     ],
     dest: './docs/.vuepress/dist',
     ga: '',
+
     evergreen: true,
     // 配置导航
     themeConfig: {
@@ -94,6 +95,7 @@ module.exports = {
         }]
 
     ]
+
 }
 
 function getGuideSidebar(groupA, groupB, groupC) {
