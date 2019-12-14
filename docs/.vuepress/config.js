@@ -85,7 +85,7 @@ module.exports = {
         docsDir: 'docs',
         docsBranch: 'master',
         editLinks: true,
-        editLinkText: '编辑此页'
+        editLinkText: '在github上编辑此页'
     },
     plugins: [
         ['@vuepress/back-to-top', true],
