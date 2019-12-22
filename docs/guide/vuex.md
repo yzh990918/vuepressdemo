@@ -161,3 +161,4 @@ computed:{
 3. 数据会自动发生映射 不需要操作
 :::
 详细了解vuex,请参考[vuex官网](https://vuex.vuejs.org/zh/)
+next :封装数据
