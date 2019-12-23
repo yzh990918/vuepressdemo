@@ -1,15 +1,15 @@
 ---
 home: true
-heroImage:  /header.png
+heroImage:  /head.png
 actionText: Get started →
 actionLink: /guide/
 features:
-  - title: 简洁至上
-    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-  - title: Vue驱动
-    details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-  - title: 高性能
-    details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+  - title: 技术性博客
+    details: 全部都是干货,从来不整虚的
+  - title: 技术复习与分享
+    details: 记录干货和项目完成完整过程,开发技巧和相关推荐
+  - title: 前端所记所略所感
+    details: 记录从事前端行业以来的做过的项目踩过的坑
 footer: MIT Licensed | Copyright © 2019-MR YANG
 ---
 
@@ -23,5 +23,8 @@ git clone https://github.com/251205668/vuepressdemo.git
 npm install
 
 # develop
-npm run dev
+npm run docs:dev
+
+# build
+npm run docs:build
 ```
