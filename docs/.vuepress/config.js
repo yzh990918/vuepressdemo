@@ -44,7 +44,12 @@ module.exports = {
             text: '实用技巧',
             link: '/skill',
           },
+         
         ],
+      },
+      {
+        text: '接口大全',
+        link: '/API/elementApi',
       },
       {
         text: '项目',
@@ -87,6 +92,7 @@ module.exports = {
         'vue2.5制作仿qq音乐项目'
       ),
       '/todo/': gettodoSidebar('计划'),
+      '/API/':getAPISidebar('实用接口')
     },
     repo: '251205668',
     repoLabel: 'Github',
@@ -159,6 +165,16 @@ function gettodoSidebar(group) {
       title: group,
       collapsable: false,
       children: ['todo'],
+    },
+  ]
+}
+
+function getAPISidebar(group) {
+  return [
+    {
+      title: group,
+      collapsable: false,
+      children: ['elementApi'],
     },
   ]
 }
