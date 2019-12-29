@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         text: '接口大全',
-        link: '/API/elementApi',
+        link: 'http://wohenpi0918.gitee.io/api-store/#/',
       },
       {
         text: '项目',
@@ -65,7 +65,7 @@ module.exports = {
           {
             text: '魔法音乐App',
             link: 'https://github.com/251205668/mymusic',
-          },
+          }
         ],
       },
       {
@@ -92,7 +92,7 @@ module.exports = {
         'vue2.5制作仿qq音乐项目'
       ),
       '/todo/': gettodoSidebar('计划'),
-      '/API/':getAPISidebar('实用接口')
+      // '/API/':getAPISidebar('实用接口')
     },
     repo: '251205668',
     repoLabel: 'Github',
@@ -171,12 +171,12 @@ function gettodoSidebar(group) {
   ]
 }
 
-function getAPISidebar(group) {
-  return [
-    {
-      title: group,
-      collapsable: false,
-      children: ['elementApi'],
-    },
-  ]
-}
+// function getAPISidebar(group) {
+//   return [
+//     {
+//       title: group,
+//       collapsable: false,
+//       children: ['elementApi'],
+//     },
+//   ]
+// }
