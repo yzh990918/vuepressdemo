@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         text: '重要的计划(Todo)',
-        link: '/todo/todo',
+        link: 'http://apidocs.yangxiansheng.top/#/todolist',
       },
       {
         text: '指南',
