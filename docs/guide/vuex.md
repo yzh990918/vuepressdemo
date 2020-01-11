@@ -151,6 +151,17 @@ computed:{
 
 ```
 
+`action.js`的作用就是接受异步操作或者批量的同步操作 然后`commit`  `action`里面的这个函数是外部组件`dispatch`进来的
+```js
+import * as types from './mutation-types'
+//像这种需要改变多次mutation的 就把它封装到action
+export const selectplay = function ({commit,state},{list,index}) {
+  // commit的作用就是告诉vuex需要执行哪一个mutation 传入的参数就是mutation的函数名 还有就是playload
+  commit(types.SET_SEQUENCE,list)
+  ....
+}
+
+```
 <br>
 
 ## 总结
