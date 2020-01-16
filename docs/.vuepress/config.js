@@ -30,22 +30,23 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: '电子书',
-        items: [
-          {
-            text: '前端',
-            link: '/about',
-          },
-          {
-            text: '服务端',
-            link: '/contact',
-          },
-          {
-            text: '实用技巧',
-            link: '/skill',
-          },
+        text: '笔记随录',
+        link: '/about/'
+        // items: [
+        //   {
+        //     text: '前端',
+        //     link: '/about/',
+        //   },
+        //   {
+        //     text: '服务端',
+        //     link: '/contact',
+        //   },
+        //   {
+        //     text: '实用技巧',
+        //     link: '/skill',
+        //   },
          
-        ],
+        // ],
       },
       {
         text: '接口大全',
@@ -93,6 +94,7 @@ module.exports = {
       ),
       '/todo/': gettodoSidebar('计划'),
       // '/API/':getAPISidebar('实用接口')
+      '/about/':getaboutSidebar('前端基础学习笔记','服务端node基础','常用技巧总结')
     },
     repo: '251205668',
     repoLabel: 'Github',
@@ -171,7 +173,37 @@ function gettodoSidebar(group) {
     },
   ]
 }
-
+function getaboutSidebar(groupA,groupB,groupC) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: [
+        '',
+        'workclass',
+        'test'
+      ],
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        '',
+        'workclass',
+        'test'
+      ],
+    },
+    {
+      title: groupC,
+      collapsable: false,
+      children: [
+        '',
+        'workclass',
+        'test'
+      ],
+    },
+  ]
+}
 // function getAPISidebar(group) {
 //   return [
 //     {
