@@ -520,6 +520,7 @@ methods:{
   back() {
     this.setfullScreen(false)
   }
+  
   play() {
     this.setfullScreen(true)
   }
@@ -528,5 +529,98 @@ methods:{
 这样就可以图标控制隐藏显示 或者迷你播放器打开 添加点击事件即可 下一节将介绍播放器核心部分
 
 
+### 播放器飞入左下角动画
+:::tip
+vue的js钩子可以帮助我们实现这个动画
+- @enter=""
+- @after-enter=""
+- @leave=""
+- @after-leave=""
+:::
 
+首先引入第三方创建动画库`create-keyframe-animation`
+具体思路:
+1. 计算两个圆心的坐标,根据坐标计算出水平竖直偏移量
+2. 定义并使用动画
+3. 清除动画
 
+<h3>定义函数计算出图片之间偏移量和缩放</h3>
+
+```js
+_getPosAndScale () {
+  // * 要做一个大图片从mini播放器飞到大图层cdWrapper的动画 使用到create-keyframe-animation第三方插键
+  // ! 思路：1.计算出偏移横纵坐标 2.横轴偏移(屏幕宽度/2-min播放器左侧偏移) 3.纵轴偏移(屏幕高度-大图层paddingTop-min播放器圆心距底部位置-cdwrapper的高度/2) 4.书写动画
+  const targetWidth = 40//图片宽度
+  const paddingLeft = 40//mini圆心左翩移
+  const paddingBottom = 30//底部距圆心距离
+  const paddingTop = 80 //顶部距圆心距离
+  const width = window.innerWidth * 0.8 //整个cd-wrapper的宽度
+  const scale = targetWidth / width//原始缩放比例
+   const x = -(window.innerWidth / 2 - paddingLeft)
+      const y = window.innerHeight - paddingTop - width / 2 - paddingBottom
+      return {
+        x,
+        y,
+        scale
+      }
+
+}
+```
+<h3>定义动画</h3>
+
+```js
+//import之后
+//进入时
+enter(el,done) {
+  const {x,y,scale} =this._getPosAndScale()
+  // 定义动画
+  let animation = {
+    // 底部飞到大图片 然后从60到100 scale先1.1然后回调
+    0：{
+      transform:`translate3d(${x}px,${y}px,scale(${scale}))`
+    },
+    60: {
+      transform: `translate3d(0,0,0) scale(1.1)`
+
+    },
+    100: {
+      transform :`translate3d(0,0,0) scale(1)`
+  }
+}
+// 注册animation
+animations.registerAnimation({
+  name:'move',
+  animation, //定义好的动画
+  presets: {// 预设参数
+  duration:400,
+  easing:'linear'
+  } 
+}),
+// 运行animation
+animations.runAnimation(this.$refs.cdWrapper,'move',done)
+}
+
+// 进入后清除
+afterEnter () {
+  // 清除animation
+  animations.unregisterAnimation('move') 
+  this.$refs.cdWrapper.style.animation = ''
+}
+```
+关闭窗口时 原理也是相似的
+
+```js
+leave (el,done) {
+  const {x, y, scale} = this._getPosAndScale()
+  this.$refs.cdWrapper.style['transform'] = `translate3d(${x}px,${y}px,0) scale(${scale})`
+  this.$refs.cdWrapper.style.transition = 'all 0.4s'
+  // 监听transitionend事件 之后执行afterLeave
+  this.$refs.cdWrapper.addEventListener('transitionend', done)
+
+  //清除transition transform
+   afterLeave () {
+      this.$refs.cdWrapper.style['transform'] = ''
+      this.$refs.cdWrapper.style.transition = ''
+    },
+```
+这样cd的打开关闭都会有一个效果不错的动画效果
