@@ -177,7 +177,8 @@ _pad(num,n=2) {
 调用格式化时间 然后挂在 dom 上
 
 <h3>进度条组件</h3>
-**在play组件上的样式**
+在play组件上的样式
+
 > flex布局,垂直居中,水平也居中,上下有两个padding 左右span文字对齐方式不同
 
 ```stylus
@@ -229,7 +230,7 @@ dom 结构：
 
 **进度条样式**
 
-```sylus
+```stylus
 .progress-bar
   height 30px
   .bar-inner
@@ -303,7 +304,7 @@ watch:{
 实现方法:
 
 - 定义好偏移函数
-- 使用 js 的三个钩子(touchstart touchmove touchend) 对进度条实现偏移
+- 使用 js 的三个钩子(`touchstart` `touchmove` `touchend`) 对进度条实现偏移
 - 向外派发事件 将当前 precent 转发到 play 组件
   :::
 
@@ -375,7 +376,7 @@ onProgressBarChange (precent) {
 
 添加完了拖动事件，接下来添加点击变换进度条事件.
 :::tip
-原理也是一样，也是计算 progressgress 偏移和 progressbtn 偏移，然后派发 precent 出去
+原理也是一样，也是计算 `progressgress` 偏移和 `progressbtn` 偏移，然后派发 precent 出去
 :::
 
 ```js
@@ -394,13 +395,13 @@ onProgressBarChange (precent) {
     },
 ```
 
-:::dangerous bug
-此处如果直接使用 e.pageX 记录元素距左边的位置会有 bug,我们这里使用 getBoundClientRect()相对视口位置 bar 相对浏览器的左侧视口位置 偏移量就等于 e.pageX-rect
+:::danger bug
+此处如果直接使用 `e.pageX` 记录元素距左边的位置会有 bug,我们这里使用 `getBoundClientRect()`相对视口位置 bar 相对浏览器的左侧视口位置 偏移量就等于 `e.pageX-rect`
 :::
 这样我们就完成了进度条的点击和拖拽进度效果
 
-接着我们要给 min-player 也制作一个圆形播放进度条效果
-同样我们创建 progress-circle 基础组件
+接着我们要给 `min-player` 也制作一个圆形播放进度条效果
+同样我们创建 `progress-circle` 基础组件
 
 ```vue
 <template>
@@ -490,8 +491,8 @@ export default {
 
 - radius radius 用来控制 svg 图的宽高 我们这里 radius 传入 32
 - precent svg 图下 progress-bar 有两个参数
-  - stroke-dasharray 描边周长 这里应该是 314(2*3.14*50)
-  - stroke-dashoffset 外层有颜色描边的长度 这里我们用(1-precent)\*dasharray 来表示当前进度
+  - **stroke-dasharray**描边周长 这里应该是 314(2*3.14*50)
+  - **stroke-dashoffset** 外层有颜色描边的长度 这里我们用(1-precent)\*dasharray 来表示当前进度
 
 ### 💛播放器模式切换
 
@@ -767,7 +768,7 @@ dot区域
 ```
 
 :::tip
-后面发现一个问题 就是iphone无法播放出声音，这是因为iphone设备或者微信浏览器对用户流量进行监控 不允许用户在浏览器上对audio进行播放 对此我采用了监听touchstart事件对audio标签进行播放
+后面发现一个问题 就是iphone无法播放出声音，这是因为iphone设备或者微信浏览器对用户流量进行监控 不允许用户在浏览器上对audio进行播放 对此我采用了监听`touchstart`事件对audio标签进行播放
 
 ```js
  firstPlay () {
@@ -777,3 +778,7 @@ dot区域
 :::
 ## 🌟总结
 综上,播放器组件全部写完，里面包含了player组件 progress-bar组件 progress-circle组件，使用到了vuex实现状态管理，学习到了样式处理 播放状态管理 以及模式切换涉及到的知识等等,接下来就是开发榜单组件，加油~~~
+
+附上效果图
+
+![GIF.gif](https://i.loli.net/2020/01/19/TpaQiOYkyRcSsVr.gif)
