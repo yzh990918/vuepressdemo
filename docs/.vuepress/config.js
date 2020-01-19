@@ -158,7 +158,8 @@ function getGuideSidebar(groupA, groupB, groupC) {
         'vuex',
         '网易云Api重构',
         'singerDetail',
-        'player1'
+        'player1',
+        'player2'
       ],
     },
   ]
