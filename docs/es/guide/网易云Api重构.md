@@ -89,7 +89,6 @@ recommend.vue
 ```
 **Data acquisition**
 ```js
-
   methods: {
     _getcommend () {
       getBanner().then((res) => {
@@ -108,7 +107,7 @@ recommend.vue
 
 ```
 - <h2>歌手页面</h2>
-:::Tip analysis
+:::tip analysis
 First of all, analyze the data of popular singers in Netease API, as shown in the figure below. These are the data that we want to encapsulate into the data arranged by Title A-Z. here we just need to refine the initial of name into each 'map [key]' array
 :::
 ![QQ screenshots20191228223312.png](https://i.loli.net/2019/12/28/oUstZ5WJF9RALiT.png)

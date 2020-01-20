@@ -3,7 +3,7 @@
 ## Project initialization
 [![vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
 [![element-ui](https://img.shields.io/badge/element--ui-2.7.0-brightgreen.svg)](https://github.com/ElemeFE/element)
-[![GitHub stars](https://img.shields.io/github/stars/PanJiaChen/vue-element-admin.svg?style=social&label=Stars)](https://github.com/251205668/mymusic)
+[![GitHub stars](https://img.shields.io/github/stars/251205668/Travel.svg?style=social&label=Stars)](https://github.com/251205668/mymusic)
 
 ::: warning
 The project is to reconstruct some code by users themselves by building the user's own code with vuecli 3. X with vuecli 2.9

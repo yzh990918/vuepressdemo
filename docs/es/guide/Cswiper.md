@@ -59,7 +59,7 @@ It's best to register globally before reusing components
 ![](./images/2019-11-14-23-10-07.png)
 
 
->书写自定义组件前安装好better-scroll插件 项目依赖
+> 书写自定义组件前安装好better-scroll插件 项目依赖
 ### Step 1. Write the basic DOM structure and style
 ```html
 <template>

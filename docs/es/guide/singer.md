@@ -1,6 +1,6 @@
 # 开发Singer组件
 ## 封装获取到的singer-list数据
-:::tip
+::: tip
 你通过jsonp拿到的singer数据并不是符合vue调用的jsonp格式
 你必须要封装字母表类排序的对象数组
 :::
