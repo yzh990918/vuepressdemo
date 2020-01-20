@@ -1,5 +1,5 @@
 # Introduction
-:tada::tada: :tada: **记录努力中的杨先生的所有日常**
+:tada::tada: :tada: **Document all the daily routines of Mr. Yang in his efforts**
 :::tip
-记得点击右上角的github去点star关注哦
+Remember to click on github in the upper right corner to follow the star
 :::

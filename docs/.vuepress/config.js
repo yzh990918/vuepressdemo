@@ -1,17 +1,19 @@
 module.exports = {
-  locales:{
-'/':{
-  lang:'ZH',
-  title:'技术文档',
-  description:'魔法的力量!'
-},
-'/es/':{
-  lang:'es',
-  title:'Technical Document',
-  description:'Magic power!'
-}
+  title: '技术文档',
+  description: '魔法的力量!',
+  locales: {
+    '/': {
+      lang: 'ZH',
+      title: '技术文档',
+      description: '魔法的力量!'
+    },
+    '/es/': {
+      lang: 'es',
+      title: 'Technical Document',
+      description: 'Magic power!'
+    }
   },
-  head:[
+  head: [
     [
       'link',
       {
@@ -20,7 +22,7 @@ module.exports = {
       }
     ]
   ],
-  dest:'./docs/.vuepress/dist',
+  dest: './docs/.vuepress/dist',
   evergreen: true,
   // 配置导航
   themeConfig: {
@@ -86,12 +88,12 @@ module.exports = {
       },
       '/es/': {
         label: 'English',
-        selectText: 'Select Languages',
+        selectText: 'Languages',
         editLinkText: 'Edit this page on Github',
         nav: [
           {
             text: 'Home',
-            link: '/es/guide/'
+            link: '/es/'
           },
           {
             text: 'Important plan(Todo)',
@@ -103,7 +105,7 @@ module.exports = {
           },
           {
             text: 'Notes with notes',
-            link: '/about/'
+            link: '/es/about/'
           },
           {
             text: 'API List',
@@ -130,18 +132,61 @@ module.exports = {
         lastUpdated: 'Last Update',
         sidebarDepth: 2,
         sidebar: {
-          '/es/': getesGuideSidebar(
-            'basis',
-            'vue2.5-Where to travel',
-            'qq music projects'
-          ),
-          '/todo/': gettodoSidebar('plan'),
-          // '/API/':getAPISidebar('实用接口')
-          '/about/': getaboutSidebar(
+          '/es/guide/': [
+            {
+              title:'Basis',
+              collapsable:false,
+              children:[
+                '/es/',
+                '/es/guide/ES6demo1.md',
+                '/es/guide/ES6demo2.md',
+                '/es/guide/ES6demo3.md',
+                '/es/guide/ES6demo4.md',
+                '/es/guide/ES6demo5.md',
+                '/es/guide/ES6demo6.md',
+              ]
+            },
+            {
+              title:'MARKDOWN-BASIS',
+              collapsable:false,
+              children:[
+                '/es/guide/first.md',
+                '/es/guide/5g.md'
+              ]
+
+            },
+            {
+              title:'vue2.5-MagicMuisc',
+              collapsable:false,
+              children:[
+                '/es/guide/begin.md',
+                '/es/guide/C1.md',
+                '/es/guide/C2.md',
+                '/es/guide/header.md',
+                '/es/guide/tab.md',
+                '/es/guide/jsonp.md',
+                '/es/guide/getrecommends.md',
+                '/es/guide/Cswiper.md',
+                '/es/guide/recommend.md',
+                '/es/guide/loading.md',
+                '/es/guide/singer.md',
+                '/es/guide/listview.md',
+                '/es/guide/映射表.md',
+                '/es/guide/axios.md',
+                '/es/guide/router.md',
+                '/es/guide/vuex.md',
+                '/es/guide/网易云Api重构.md',
+                '/es/guide/singerDetail.md',
+                '/es/guide/player1.md',
+                '/es/guide/player2.md'
+              ]
+            }
+          ],
+          '/es/about/':getesaboutSidebar(
             'Front-end basic study notes',
-            'Server Node foundation',
+            'Server Node.js foundation',
             'Summary of common skills'
-          )
+          ),
         }
       }
     },
@@ -181,7 +226,7 @@ function getGuideSidebar(groupA, groupB, groupC) {
     {
       title: groupB,
       collapsable: false,
-      children: ['first']
+      children: ['first','begin']
     },
     {
       title: groupC,
@@ -211,54 +256,6 @@ function getGuideSidebar(groupA, groupB, groupC) {
     }
   ]
 }
-function getesGuideSidebar(groupA, groupB, groupC) {
-  return [
-    {
-      title: groupA,
-      collapsable: false,
-      children: [
-        '',
-        '/es/guide/ES6demo1',
-        '/es/guide/ES6demo2',
-        '/es/guide/ES6demo3',
-        '/es/guide/ES6demo4',
-        '/es/guide/ES6demo5',
-        '/es/guide/ES6demo6'
-      ]
-    },
-    {
-      title: groupB,
-      collapsable: false,
-      children: ['first']
-    },
-    {
-      title: groupC,
-      collapsable: false,
-      children: [
-        '/es/guide/begin.md',
-        '/es/guide/C1',
-        '/es/guide/C2',
-        '/es/guide/header',
-        '/es/guide/tab',
-        '/es/guide/jsonp',
-        '/es/guide/getrecommends',
-        '/es/guide/Cswiper',
-        '/es/guide/recommend',
-        '/es/guide/loading',
-        '/es/guide/singer',
-        '/es/guide/listview',
-        '/es/guide/映射表',
-        '/es/guide/axios',
-        '/es/guide/router',
-        '/es/guide/vuex',
-        '/es/guide/网易云Api重构',
-        '/es/guide/singerDetail',
-        '/es/guide/player1',
-        '/es/guide/player2'
-      ]
-    }
-  ]
-}
 function gettodoSidebar(group) {
   return [
     {
@@ -268,6 +265,7 @@ function gettodoSidebar(group) {
     }
   ]
 }
+
 function getaboutSidebar(groupA, groupB, groupC) {
   return [
     {
@@ -287,3 +285,23 @@ function getaboutSidebar(groupA, groupB, groupC) {
     }
   ]
 }
+function getesaboutSidebar(groupA, groupB, groupC) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: ['', '/es/about/workclass', '/es/about/test']
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: ['', '/es/about/workclass', '/es/about/test']
+    },
+    {
+      title: groupC,
+      collapsable: false,
+      children: ['', '/es/about/workclass', '/es/about/test']
+    }
+  ]
+}
+

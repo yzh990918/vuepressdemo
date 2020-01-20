@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage:  /head.png
-actionText: Get started →
+actionText: 立即开始 →
 actionLink: /guide/
 features:
   - title: 技术性博客
