@@ -87,4 +87,22 @@ methods:{
 }
 ```
 
+踩坑日记
+search组件里面的suggest跳转歌手详情有bug
+:::warning bug
+如果直接在suggest绑定的点击事件里嵌入子路由跳转，会报堆栈溢出的错误，解决办法就是在父组件search组件操作路由跳转
+:::
+```js
+//suggest.js
+selectItem(item){
+this.$router.push({
+  path:`/search/singer/${item.id}`
+})
+this.setSinger(item)
+}
+...mapMutations({
+  setSinger:'SET_SINGER'
+})
+```
+
 综上就可以实现路由跳转到对应的页面,参数可以调,如果学习更多，请参考[vue-router](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)
