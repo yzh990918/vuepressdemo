@@ -81,7 +81,7 @@ module.exports = {
           '/todo/': gettodoSidebar('计划'),
           '/about/': getaboutSidebar(
             '前端基础学习笔记',
-            '服务端node基础',
+            '小程序笔录',
             '常用技巧总结'
           )
         }
@@ -271,17 +271,17 @@ function getaboutSidebar(groupA, groupB, groupC) {
     {
       title: groupA,
       collapsable: false,
-      children: ['', 'workclass', 'test']
+      children: ['workclass']
     },
     {
       title: groupB,
       collapsable: false,
-      children: ['', 'workclass', 'test']
+      children: ['test']
     },
     {
       title: groupC,
       collapsable: false,
-      children: ['', 'workclass', 'test']
+      children: ['']
     }
   ]
 }
