@@ -145,7 +145,7 @@ Page({
 :::
 
 实例代码
-```wxml
+```html
 <!-- sample.wxml -->
 <view class="btn-area">
   <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
@@ -157,4 +157,136 @@ Page({
 
 ## 模块化
 支持ES6模块化引入,类似于vue
+
+## 小知识点
+:::warning
+- 点击事件:bind:tap
+- 阻止事件冒泡:catch:tap
+- 重定向 wx.redirectTo不会又返回按钮 因为路由前加载onLoad卸载钩子
+- 引入自定义组件方式
+在页面的json文件里面
+
+```json
+{
+  "usingComponents":{
+    "定义的组件名"："路径"
+  }
+}
+```
+- 全局app.wxss只有font color 才能被组件继承 但是页面可以继承所有的选择器
+- display:inline-flex 消除容器的块状 宽度变为自适应,并且可以支持flex 缺点是抖动
+- properties属性 data数据
+propeties属性支持定义数据类型,默认值,和监听函数
+```js
+properties:{
+    like:{
+        type:
+        value:
+        observer:function(){
+            //监听数据变化的回调 
+        }   
+    }
+}
+//拿到properties的数据
+this.properties.like
+//拿到data数据
+this.data.like
+
+//改变了数据就要
+this.setData({
+like:like
+})
+```
+:::
+
+## 访问API
+认识一下wx.request发送请求
+
+:::tip
+wx.request({
+})
+
+几个参数:
+- url
+- data 请求的参数
+- method 请求的类型
+- header 请求的头部信息
+- success:(res)=>{} 请求成功的回调函数
+- fail:(res)=>{} 网络异常的回调
+:::
+
+常用方法:封装到util下的http.js
+
+http.js
+
+```js
+const baseurl=""
+const appkey=:""
+// 请求错误码信息定义
+const tips ={
+  1:'默认错误',
+  1005:'content',
+  ...
+}
+export class HTTP={
+  wx.request(params){
+    vat that = this
+    var url = baseurl + params.url
+    if(!params.method){
+      params.method='GET'
+    }
+    wx.request({
+      url:url,
+      method:params.method,
+      data:params.data,
+      header:{
+        'content-type':'application/json',
+        'appkey':appkey
+      },
+      success:(res)=>{
+        let status = res.statusCode.toString()
+        if(status.startsWith('2')){
+          params.success(res.data)
+        }else{
+          let err_or =res.data.err_code
+          this._showerror_(err_or)
+        }
+      },
+      fail:(res)=>{
+        wx.showToast({
+          title:'当前网络不可用',
+          content:'请检查网络',
+          confirmText:'确定',
+          showCancle:false
+        })
+      }
+    })
+  },
+  _showerror_(err_code){
+    if(!err_code){
+      err_or = 1
+    }
+    wx.showToast({
+      title:tips[err_code],
+      icon:'none',
+      duration:2000
+    })
+  }
+}
+```
+封装完全局请求之后,在页面js文件里面引入并调用
+```js
+import {HTTP} from '../../util/http.js'
+var http = new HTTP()
+
+onLoad(){
+  http.request({
+    url:'/classic/latest',
+    success:(res)=>{
+      console.log(res)
+    }
+  })
+}
+```
+
 

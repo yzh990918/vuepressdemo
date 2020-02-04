@@ -82,7 +82,7 @@ module.exports = {
           '/about/': getaboutSidebar(
             '前端基础学习笔记',
             '小程序笔录',
-            '常用技巧总结'
+            '布局技巧总结'
           )
         }
       },
@@ -281,7 +281,7 @@ function getaboutSidebar(groupA, groupB, groupC) {
     {
       title: groupC,
       collapsable: false,
-      children: ['']
+      children: ['review']
     }
   ]
 }

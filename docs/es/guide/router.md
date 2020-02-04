@@ -81,5 +81,36 @@ methods:{
 
 }
 ```
+> 嵌套路由的参数可以通过`this.$router.params.id`获取
 
 综上就可以实现路由跳转到对应的页面,参数可以调,如果学习更多，请参考[vue-router](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)
+
+
+:::tip 补充
+- 路由重定向
+将一个路由重定向到另一个路由,通常情况下可以分配跟路由
+
+这里就将跟路由指向recommend路径的路由
+```js
+{
+      path: '/',
+      redirect: '/recommend'
+},
+```
+- 路由参数
+如`/recommend?message=xxx`
+
+获取到路由参数:**this.$router.query.message**
+
+- 编程式路由(常用)
+
+```js
+this.$router.push({
+  path:'/a/aa',
+  query:{
+    message:'hello'
+  }
+})
+```
+> 不想回退路由:this.$router.replace() 消除history
+:::
