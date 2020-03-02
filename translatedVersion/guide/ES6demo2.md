@@ -1,18 +1,18 @@
 ---
-title: ES6巩固（二)解构赋值
+title: ES6 consolidation (II) deconstruction assignment
 tags:
     -javascript
     -ES6
 categories:
-        -前端    
+        -Front end   
         -ES6
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191017121754579.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)<!--more-->
-# 解构赋值用法详解
+![Insert picture description here](https://img-blog.csdnimg.cn/20191017121754579.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)<!--more-->
+# A detailed explanation of the usage of deconstruction and assignment
 
 
-## 数组解构
-**简单的解构数组**
+## Array deconstruction
+**Simple deconstruction array**
 ```javascript
 {
   let a,b,rest;
@@ -20,7 +20,7 @@ categories:
   console.log(a,b);
 }//1,2
 ```
-**剩余运算符的应用**
+**Application of residue operator**
 
 ```javascript
 {
@@ -29,7 +29,7 @@ categories:
   console.log(a,b,rest);
 }//1,2,[3,4,5]
 ```
-**如果配对不完全 可以设置默认值**
+**If the pairing is not complete, the default value can be set**
 
 ```javascript
 {
@@ -38,7 +38,7 @@ categories:
   console.log(a, b, c); 
 }//1,2,3 如果没有给c赋值 则为undefined
 ```
-**应用场景 交换数值（比普通的要用中间变量简便的多）**
+**Exchange values of application scenarios (much easier than using intermediate variables)**
 
 ```javascript
 {
@@ -48,8 +48,8 @@ categories:
   console.log(a, b);
 } //2 1
 ```
-## 函数解构
-**将函数返回值赋给变量**
+## Function deconstruction
+**Assign function return value to variable**
 
 ```javascript
 {
@@ -61,7 +61,7 @@ categories:
   console.log(a, b);
 } // 1 2
 ```
-**选择性接收变量**
+**Selective receive variable**
 
 ```javascript
 {
@@ -73,7 +73,7 @@ categories:
   console.log(a,b);
 }//1 4
 ```
-**数组长度未知时 返回第一个数值 剩余结构为数组**
+**Returns the first value when the array length is unknown. The remaining structure is array**
 
 ```javascript
   function f(){
@@ -84,8 +84,8 @@ categories:
   console.log(a,b);
 }//1,[3,4,5]
 ```
-## 对象解构
-**简单对象解构**
+## Object deconstruction
+**Simple object deconstruction**
 
 ```javascript
 {
@@ -100,7 +100,7 @@ categories:
   console.log(a,b);
 }// 1 2
 ```
-**设置默认值**
+**Set default**
 
 ```javascript
 {
@@ -108,7 +108,7 @@ let {a=10,b=5}={a=3}
 console.log(a,b)
 }//3 5
 ```
-**模仿json文件解构**
+**Imitating JSON file deconstruction**
 
 ```javascript
 {
@@ -124,7 +124,7 @@ let {title:estitle,test[{title:cdtitle}]}=metaData;
 }//abc test
 
 ```
-## 字符串解构
+## String deconstruction
 
 ```javascript
 const [a, b, c, d, e] = 'hello';
@@ -134,7 +134,7 @@ c // "l"
 d // "l"
 e // "o
 ```
-## 数值与布尔类型解构
+## Numerical and boolean type deconstruction
 
 ```javascript
 let { toString: s } = 123;

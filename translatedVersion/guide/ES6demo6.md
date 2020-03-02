@@ -9,10 +9,10 @@ categories:
 ---
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019145036964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)
 <!--more-->
-# promise详解
-### 1.了解回调函数
+# Promise details
+### 1.Understanding callback functions
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019150238375.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)
-#### 经典案列
+#### Classic case series
 ```javascript
 function say(value){
 alert(value)
@@ -25,12 +25,12 @@ somefunction(value)
 execute(say,'value')
 
 ```
-### 2.了解异步编程
-为何同步：同步就是一切按序而行
-何为异步：不受顺序影响 都可以执行
-**异步的重要性：试想一个饭店任何操作都是同步的，那么这家饭店就会因为一切按照顺序而来 服务员只能接待完一位顾客后才能接待下一位顾客 这样的效率是非常之低的 这时候就需要异步编程了**
+### 2.Understanding asynchronous programming
+Understand why asynchronous programming is synchronous: synchronization is everything in order
+What is asynchronous: it can be executed regardless of the order
+**The importance of asynchrony: imagine that any operation of a hotel is synchronous, so the hotel will come because everything is in order, and the server can only receive one customer before receiving the next customer. This efficiency is very low, so asynchronous programming is needed**
 
-#### 最简单的异步
+#### Simplest asynchrony
 
 ```javascript
 // 异步就是不需要等待函数执行完按顺序调用  
@@ -48,7 +48,7 @@ execute(say,'value')
             a();
             b();
 ```
-#### 异步处理回调函数 （ES5写法）
+#### Asynchronous processing callback function (Es5 writing method)
 
 ```javascript
    //模拟ajax请求
@@ -66,10 +66,10 @@ execute(say,'value')
 
             })
 ```
-**这样处理一个操作后执行回调可以是可以 就是如果有很多异步操作的话 代码就会变得十分复杂 这个时候就需要用到promise去处理**
+**Asynchronously handle callback function (Es5 writing method) so that the callback can be executed after handling an operation. If there are many asynchronous operations, the code will become very complex. At this time, we need to use promise to handle it**
 ####  promise
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019151259383.png)
-###### promise实例
+###### Promise instance
 
 ```javascript
  // ES6写法实现上述案列
@@ -87,7 +87,7 @@ execute(say,'value')
             })
 
 ```
-ajax请求
+Ajax request
 ```javascript
              //  写法类似于获取ajax请求
                     getCityInfo () {
@@ -104,7 +104,7 @@ ajax请求
             }
 ```
 
-##### 实现上述想法 a执行完 执行b 在执行c
+##### To realize the above idea a, execute B, execute C
 
 ```javascript
   // 实现执行 a 再执行b 再执行c 再执行d
@@ -126,7 +126,7 @@ ajax请求
                 console.log('timeout4')
             })
 ```
-##### 如果promise异步操作失败 如何获取异常
+##### How to get exception if promise asynchronous operation fails
 
 ```javascript
 // 抛出异常
@@ -155,7 +155,7 @@ ajax请求
                 console.log('catch', err);
             });
 ```
-应用
+application
 
 ```javascript
 // promise的应用  加载完图片再显示再屏幕上

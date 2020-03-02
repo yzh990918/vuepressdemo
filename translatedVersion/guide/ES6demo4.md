@@ -9,8 +9,8 @@ categories:
 ---
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019145036964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)
 <!--more-->
-# 数组扩展
-##### 1.将一串数据转为数组 Array.of()
+# Array extension
+##### 1.Convert a string of data to array. Of ()
 
 ```javascript
     let arr = Array.of(3, 4, 7, 9, 11);
@@ -20,7 +20,7 @@ categories:
     let empty = Array.of();
     console.log('empty', empty);
 ```
-#####  2.Array.from() 将伪数组.集合转换为数组
+#####  2.Array. From() converts a pseudo array. Collection to an array
 
 ```javascript
     let p = document.querySelectorAll('p');
@@ -33,14 +33,14 @@ categories:
     // 第二个参数可以执行回调遍历数组
     console.log(Array.from([1, 3, 5], function(item) { return item * 2 }));//2，6，10
 ```
-##### 3.替换数组元素 Array.fill（）
+##### 3.Replace array element array. Fill()
 ```javascript
     // fill()  将数组中的每个元素都换成参数 
     console.log('fill-7', [1, 'a', undefined].fill(7));
     // fill(替换的数,起始下标,结束末尾下标)
     console.log('fill,pos', ['a', 'b', 'c'].fill(7, 1, 3));//a 7 7
 ```
-##### 4.遍历数组返回下标 值
+##### 4.Traversal array returns subscript value
 
 ```javascript
     // .keys() 返回数组下标
@@ -56,7 +56,7 @@ categories:
         console.log('values', index, value);
     }
 ```
-##### 5.在数组中查找符合条件的item Array.find(callback)
+##### 5.Find the qualified item array.find (callback) in the array
 
 ```javascript
  // find 查找符合条件的item（只找到符合条件的第一个数）
@@ -64,7 +64,7 @@ categories:
     // findIndex同理 只找到第一个下标
     console.log([1, 2, 3, 4, 5, 6].findIndex(function(item) { return item > 3 }));
 ```
-##### 6.在数组中搜索是否包含该关键词 Array.includes()
+##### 6.Search the array for the keyword array. Includes()
 
 ```javascript
 // 判断数组中是否包含该参数

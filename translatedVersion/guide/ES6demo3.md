@@ -9,18 +9,18 @@ categories:
 ---
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019145036964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)
 <!--more-->
-# 数值扩展
-##### 1.二进制表示法 以0b开头
+# Numerical expansion
+##### 1.Binary representation starts with 0b
 
 ```javascript
 console.log('B', 0B111110111);//494
 ```
-##### 2.八进制表示法 以0o开头
+##### 2.Octal notation starts with 0o
 
 ```javascript
   console.log(0o767);//503
 ```
-##### 3.判断一个数是否有尽 或者判断是否为字符
+##### 3.Judge whether a number is full or whether it is a character
 
 ```javascript
     console.log('15', Number.isFinite(15));
@@ -31,7 +31,7 @@ console.log('B', 0B111110111);//494
     // isNaN() 判断是否是字符
     console.log('0', Number.isNaN(0));//false
 ```
-##### 4.判断一个数是否为整数 isInteger()
+##### 4.Determine whether a number is an integer isinteger ()
 
 ```javascript
     console.log('25', Number.isInteger(25));//true
@@ -39,7 +39,7 @@ console.log('B', 0B111110111);//494
     console.log('25.1', Number.isInteger(25.1));//false
     console.log('25.1', Number.isInteger('25'));//true
 ```
-##### 5.判断整数的取值极限
+##### 5.Judge the value limit of integer
 
 ```javascript
   // 表示数的一个最大上限：MAX_SAFE_INTEGER
@@ -48,14 +48,14 @@ console.log('B', 0B111110111);//494
     // isSafeInteger() 判断是否在整数的取值范围
     console.log('a', Number.isSafeInteger('a'));//false
 ```
-##### 6.返回向下取整的整数 Math.trunc()
+##### 6.Returns the integer math. Trunc() rounded down
 
 ```javascript
  // Math.trunk() 返回整数 向下取整
     console.log(4.1, Math.trunc(4.1));//4
     console.log(4.9, Math.trunc(4.9));//4
 ```
-##### 7.判断数的正负
+##### 7.Positive and negative judgment number
 
 ```javascript
   // 判断是否为 正 负 零

@@ -1,6 +1,16 @@
 # 前端基础
 ## css易错复习
 
+### css选择器及权重分析
+
+选择器:
+
+![](https://image.yangxiansheng.top/img/QQ截图20200302165511.png?imagelist)
+
+选择器权重计算:
+
+![](https://image.yangxiansheng.top/img/QQ截图20200302165542.png?imagelist)
+
 ### text-align属性
   1. text-align:**justify** 两端对齐
   2. text-align属性只对块级元素起作用 行内级元素无效
@@ -8,8 +18,11 @@
 ### line-height属性
 **行高指的是文本间基线的距离，其单位可以为px,百分比,em**
 文字基线 顶线 划分
+行高就是inline-box的高度,默认情况下行内元素是基于base-line对齐的
 ![QQ截图20200128111606.png](https://i.loli.net/2020/01/28/rxFLRVgoTkMiaYI.png)
 ![QQ截图20200128111201.png](https://i.loli.net/2020/01/28/8HXcyCMSEGqfh45.png)
+
+> 图片3px问题:因为图片本身也是行内元素,也是基于基线对齐,基线距离底部会有一个间隙,所以会有留白,解决方案:`font-size:0` 或者 `vertical-align:bottom`
 
 ### vertical-align
 垂直对齐方式 只作用于行内元素,块级元素设置无效
@@ -107,6 +120,17 @@ border-radius 50%
 -o-border-radius 50%
 :::
 
+**border实现三角形**
+
+```css
+.div{
+  width:0;
+  height:300px;
+  border-bottom:30px solid red;
+  border-left:30px transparent;
+  border-right:30px transparent
+}
+```
 ### box-shadow
 原理就是在原来的盒子下盖住一个盒子 然后控制颜色偏移 模糊
   - **属性**：
@@ -233,7 +257,10 @@ border-radius 50%
   - clip 溢出文本隐藏
   - ellipsis 显示省略号
   - string (只兼容火狐浏览器)
-
+### 文字换行
+- overflow-wrap(word-wrap) 是否保留单词
+- word-break 针对多字节文字 设定保留的单位
+- white-space 空白处是否断行 no-wrap
 
 ### @font-face
 语法规则
@@ -414,6 +441,9 @@ animation:name duration timing-function delay iteration-count direction fill-mod
   - no-wrap
   - wrap 换行元素会居中 会有间距 消除间距方法(减少容器高度)
 :::
+
+### bootstrap入门
+
 
 
 
@@ -651,5 +681,6 @@ function(e){
 :::
 
 // todo:js面向对象 正则表达式复习 案例实现 json ajax 登陆注册实现 小程序入门 mpvue实现书城 纯正商务 uniapp新鲜事板块 过程中烦躁就做在东理开发
+
 
 

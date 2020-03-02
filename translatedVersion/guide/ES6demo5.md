@@ -9,9 +9,9 @@ categories:
 ---
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019145036964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)
 <!--more-->
-# symbol详解
+# Symbol detailed explanation
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191019145511919.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjc2OTU2MQ==,size_16,color_FFFFFF,t_70)
-#### 最简单的symbol实例
+#### Simplest symbol instance
 
 ```javascript
     // 声明
@@ -26,7 +26,7 @@ categories:
     let a4 = Symbol.for('a3');
     console.log(a3 === a4);//true
 ```
-#### symbol简单的用法
+#### Simple use of symbol
 
 ```javascript
 let a1 = Symbol.for('abc');
